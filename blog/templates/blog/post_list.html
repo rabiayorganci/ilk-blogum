@@ -7,7 +7,7 @@
                 {{ post.yayinlanma_tarihi }}
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.baslik }}</a></h1>
-            <p>{{ post.yazi|linebreaks }}</p>
+            <p>{{ post.yazi|safe|truncatewords:"50"|linebreaks }}</p>
         </div>
     {% endfor %}
 {% endblock content %}

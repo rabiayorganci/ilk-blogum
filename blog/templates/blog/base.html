@@ -15,16 +15,19 @@
     {% endif %}
     <h1><a href="/">Django Girls Blog</a></h1>
   </div>
+  {% block banner_img %}
+  {% endblock %}
   <div class="content container">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="main-area">
-        {% block content %}
-        {% endblock %}
+    <div class="row col-centered">
+      <div class="col-md-8 ">
+          {% block content %}
+          {% endblock %}
       </div>
+      <div class="col-md-4">
+        {% block images%}
+        {% endblock %}
       </div>
     </div>
   </div>
-
 </body>
 </html>

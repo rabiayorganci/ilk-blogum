@@ -4,21 +4,54 @@ body {
 }
 
 .page-header {
-    background-color: rgba(102,0,0,0.5);
+    background-color: rgba(235,235,235,0.7);
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 0px 20px 20px 40px;
+    max-height: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1030;
 }
-.page-header main-page{
-  background-image: url({{STATIC_URL}}{{\img\banner.png}});
-}
+
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #660000;
     font-size: 36pt;
     text-decoration: none;
+    font-weight: bold
 }
 
 .content {
     margin-left: 40px;
+}
+
+.col-centered{
+  display: block;
+   float: none;
+   margin-right: 0 auto;
+   margin-left: 0 auto;
+}
+.banner{
+  margin-top: 0;
+  padding-top: 0;
+  background-image: url(/static/img/banner.jpg);
+  background-position: center center;
+	background-size: cover;
+	padding: 0em 0em 0em;
+	text-align: center;
+  min-height: 400px;
+}
+
+.wo-banner-page{
+  padding-top: 130px;
+}
+
+.row{
+  padding-top: 10px;
+}
+.col-md-4 img{
+  width: 90%;
+  align-content: center;
 }
 
 h1, h2, h3, h4 {

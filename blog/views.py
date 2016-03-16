@@ -12,7 +12,7 @@ from django.conf import settings
 def post_list(request):
     posts = Post.objects.filter(yayinlanma_tarihi__lte=timezone.now()).order_by('-yayinlanma_tarihi')
     #return render(request, 'blog/post_list.html', {'posts': posts})
-    path = "static/img/gallery/"  
+    path = "/static/img/gallery/"  
     img_list =os.listdir(path)
     return render(request, 'blog/post_list.html', {'images': img_list, 'posts': posts})
 
